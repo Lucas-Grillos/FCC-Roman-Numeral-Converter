@@ -50,8 +50,9 @@ form label {
 
 #number {
     all: unset;
+    box-sizing: border-box;
     display: block;
-    padding: 8px;
+    padding: 4px 12px;
     font-size: 36px;
     width: 90%;
     background-color: var(--body-bg-color);
@@ -61,6 +62,18 @@ form label {
 #number:focus {
     outline: 2px solid #0074D9;
     outline-offset: 1px;
+}
+
+#submit {
+    all: unset;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    width: 90%;
+    font-size: 28px;
+    padding: 12px 12px;
+    cursor: pointer;
+    background-image: linear-gradient(#FF851B 90%, #FF4136);
 }
 
 #heading {
