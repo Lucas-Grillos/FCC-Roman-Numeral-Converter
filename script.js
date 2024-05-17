@@ -40,6 +40,24 @@ const showError = (error) => {
     output.classList.toggle("display");
 };
 
+const convertLoop = (number) => {
+    let romanArr = []
+    let decis = [...decimals]
+    while (decis.length > 0) {
+        if (decis[0] <= number) {
+            romanArr.push(numeralObj[decis[0]]);
+            number-=decis[0];
+        } else {
+            decis.shift();
+        }
+    }
+    return romanArr.join("");
+};
+
+const showMessage = (number) => {
+    let romanNumeral = convertLoop(number);
+};
+
 const checkValidInput = (event) => {
     event.preventDefault();
     if ([...output.classList].includes("error")) {
