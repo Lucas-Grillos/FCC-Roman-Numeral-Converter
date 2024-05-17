@@ -34,6 +34,12 @@ const numeralObj = {
     1: "I"
 };
 
+const showError = (error) => {
+    output.textContent = error;
+    output.classList.toggle("error");
+    output.classList.toggle("display");
+};
+
 const checkValidInput = (event) => {
     event.preventDefault();
     if ([...output.classList].includes("error")) {
