@@ -55,16 +55,18 @@ const convertLoop = (number) => {
 };
 
 const showMessage = (number) => {
-    let romanNumeral = convertLoop(number);
+    output.classList.toggle("display");
+    output.textContent = convertLoop(number);
 };
 
 const checkValidInput = (event) => {
     event.preventDefault();
+    output.textContent = '';
     if ([...output.classList].includes("error")) {
-        console.log("Error!");
+        output.classList.toggle("error");
     }
     if ([...output.classList].includes("display")) {
-        console.log("Display!");
+        output.classList.toggle("display");
     }
 
     let checkNum = number.value;
